@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Someone Special ❤️</title>
+<style>
+body{
+margin:0;
+font-family:'Courier New';
+background:linear-gradient(to bottom,#fff1e6,#ffd6e0);
+text-align:center;
+}
+
+.container{padding:40px;}
+
+button{
+padding:15px 25px;
+font-size:18px;
+border:none;
+border-radius:30px;
+margin:15px;
+cursor:pointer;
+}
+
+.yes{background:#ff4d6d;color:white;}
+.no{background:black;color:white;position:absolute;}
+
+.hidden{display:none;}
+
+.video-wrapper{
+width:90%;
+max-width:400px;
+height:500px;
+overflow:hidden;
+margin:auto;
+border-radius:20px;
+}
+
+video{
+width:100%;
+margin-top:-80px;
+}
+
+img{
+width:80%;
+margin:20px 0;
+border-radius:20px;
+}
+
+.love{
+font-size:28px;
+margin:20px;
+color:#ff4d6d;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="question">
+<h1>Priyanka 💌<br>Will you be my Valentine?</h1>
+<button class="yes" onclick="showLove()">YES 💕</button>
+<button class="no" onmouseover="moveButton(this)">NO 🙈</button>
+</div>
+
+<div class="container hidden" id="love">
+<h1>Thank you baby ❤️</h1>
+<p>Okay okay… now don’t blush 😏</p>
+
+<h2>MEMORY 💞</h2>
+
+<div class="video-wrapper">
+<video controls autoplay>
+<source src="chatvideo.mp4" type="video/mp4">
+</video>
+</div>
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+
+<div class="love">I love you 💖</div>
+<div class="love">I LOVE YOU 😘</div>
+<div class="love">𝓘 𝓵𝓸𝓿𝓮 𝔂𝓸𝓾 🌹</div>
+<div class="love">Forever yours 💍</div>
+</div>
+
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function showLove(){
+document.getElementById("question").classList.add("hidden");
+document.getElementById("love").classList.remove("hidden");
+}
+function moveButton(btn){
+btn.style.top=Math.random()*500+"px";
+btn.style.left=Math.random()*300+"px";
+}
+</script>
+
+</body>
+</html>
